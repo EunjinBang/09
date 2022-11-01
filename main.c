@@ -5,22 +5,20 @@
 
 #define SIZE 5
 
-int main(int argc, char *argv[]) {
-	int i, average;
-	int sum;
+int main(void) {
+	
+	int i;
 	int grade[SIZE];
+	int score[SIZE];
 	
-	sum = 0;
+	for (i=0;i<SIZE;i++)
+		grade[i] = rand()%100;
 	
+	for (i=0;i<SIZE;i++)	
+	grade[i] = score[i];
+		
 	for(i=0;i<SIZE;i++)
-	{
-		printf("학생 성적을 입력하세요:");
-		scanf("%d", &grade[i]);
-		sum+=grade[i]; 
-	}
-	
-	average = sum/SIZE;
-	printf("성적 평균: %d\n", average);
+		printf("grade[%d]=%d\nscore[%d]= %d\n",i, grade[i], i, score[i]);	
 	
 	return 0;
 }
