@@ -8,7 +8,7 @@
 
 void addMatrix(int A[][COLS], int B[][COLS], int C[][COLS]);
 void printMatrix(int A[][COLS]);
-int C[ROWS][COLS];
+
 
 int main(void) {
 	
@@ -21,6 +21,7 @@ int main(void) {
 	{1, 0, 0}, 
 	{0, 1, 0}, 
 	{0, 0, 1}};
+	int C[ROWS][COLS];
 	
 	addMatrix(A, B, C);
 	printMatrix(C);
@@ -44,7 +45,7 @@ void printMatrix(int A[][COLS])
 	for (r=0; r<ROWS; r++){
 	{
 		for(c=0;c<COLS;c++)
-			printf("%3d", C[r][c]);
+			printf("%3d", A[r][c]);
 	}
 	printf("\n");}
 }
